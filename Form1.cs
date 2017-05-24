@@ -83,8 +83,6 @@ namespace FormData
                 }
                 client.Disconnect(true);
 
-                Debug.Print(String.Format("1. MessageGrid Width={0}", MessageGrid.Width));
-
                 // Need to use a BindingSource if list can be updated outside of grid... http://stackoverflow.com/questions/16695885/binding-listt-to-datagridview-in-winform
                 MessageGrid.DataSource = messages;
 
@@ -133,7 +131,6 @@ namespace FormData
             {
                 richTextBox1.Text = "Newsletter Signup - message is blank";
             }
-
         }
 
         private void MessageGrid_DataBindingComplete(object sender, DataGridViewBindingCompleteEventArgs e)
@@ -147,7 +144,6 @@ namespace FormData
                     r.DefaultCellStyle.BackColor = System.Drawing.Color.SandyBrown;
                 }
             }
-
         }
 
         private void BtnExport_Click(object sender, EventArgs e)
@@ -191,8 +187,6 @@ namespace FormData
                             StatusProgress1.PerformStep();
                         }
                     }
-
-                    //StatusProgress1.Value = 0;
                 }
             }
         }
